@@ -25,7 +25,7 @@ public class Login {
 		if (email != null && password != null) {
 			System.out.println("list control");
 			list = daoManagerHelper.read(email,password);
-			if (list.get(2).equals(email) && list.get(3).equals(password)) {
+			if (list.get(1).equals(email) && list.get(2).equals(password)) {
 				return true;
 			}
 		}

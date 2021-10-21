@@ -9,6 +9,7 @@ import com.example.eticaret.entity.User;
 
 public class Runner {
 	public static void main(String[] args) {
+		
 		Product product = new Product("Cv123", 100);
 		Product product1 = new Product("Cv456", 200);
 
@@ -19,9 +20,9 @@ public class Runner {
 
 		shoppingCart.pay(new CrediCardPayment("bekir",123,456));
 
-		
+		//giriþ sayfasý
 		Login login = new Login(new DaoManager());
-		boolean result = login.loginControl("bekir","123");
+		boolean result = login.loginControl("zeyveli44","12345");
 		System.out.println("giriþ :"+result);
 		
 	}

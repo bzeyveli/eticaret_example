@@ -3,7 +3,7 @@ package com.example.eticaret.business;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.eticaret.business.abstracts.ShoppingMethods;
+import com.example.eticaret.business.abstracts.ShoppingMethodsHelper;
 import com.example.eticaret.entity.Product;
 
 public class ShoppingCart {
@@ -27,7 +27,7 @@ public class ShoppingCart {
 		return sum;
 	}
 	
-	public void pay(ShoppingMethods shoppingMethods){
+	public void pay(ShoppingMethodsHelper shoppingMethods){
 		shoppingMethods.pay(sumAmount());
 	}
 }

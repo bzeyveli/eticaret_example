@@ -1,5 +1,5 @@
 package com.example.eticaret.business.abstracts;
 
-public interface ShoppingMethods {
+public interface ShoppingMethodsHelper {
 	void pay(double amount);
 }

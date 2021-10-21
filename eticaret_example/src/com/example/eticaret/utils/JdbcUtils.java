@@ -13,7 +13,7 @@ public class JdbcUtils {
 
 	public static String url = "jdbc:mysql://localhost:3306/eticaret";
 	public static String name = "root";
-	public static String password = "12345";
+	public static String password = "55310588";
 
 	public static Connection getConnection() throws SQLException {
 		return DriverManager.getConnection(url, name, password);

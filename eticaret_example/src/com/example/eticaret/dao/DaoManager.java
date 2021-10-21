@@ -12,7 +12,7 @@ import com.example.eticaret.entity.User;
 import com.example.eticaret.utils.JdbcUtils;
 
 public class DaoManager implements DaoManagerHelper {
-	
+
 	public static PreparedStatement preparedStatement = null;
 	public static Statement statement = null;
 	public static ResultSet resultSet;
@@ -21,22 +21,22 @@ public class DaoManager implements DaoManagerHelper {
 		return false;
 	}
 
-	public List<String> read(String email,String password) {
+	public List<String> read(String email, String password) {
 		List<String> list = new ArrayList<String>();
-		preparedStatement  = JdbcUtils.getPreparedStatement("select * email,password from user where email="+email+" password ="+password);
+		preparedStatement = JdbcUtils.getPreparedStatement("select id,email,password from user where id=1");
 		try {
-			resultSet =preparedStatement.executeQuery();
-			while(resultSet.next()){
+			resultSet = preparedStatement.executeQuery();
+			while (resultSet.next()) {
 				list.add(resultSet.getString("id"));
-				list.add(resultSet.getString("name"));
+				// list.add(resultSet.getString("name"));
 				list.add(resultSet.getString("email"));
-				list.add(resultSet.getString("passwor"));
+				list.add(resultSet.getString("password"));
 			}
 		} catch (SQLException e) {
 			System.out.println("Kullanýcý kayýtlý deðil");
 			e.printStackTrace();
 		}
-		
+
 		return list;
 	}
 

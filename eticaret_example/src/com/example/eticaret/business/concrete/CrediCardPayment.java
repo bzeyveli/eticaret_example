@@ -1,8 +1,8 @@
 package com.example.eticaret.business.concrete;
 
-import com.example.eticaret.business.abstracts.ShoppingMethods;
+import com.example.eticaret.business.abstracts.ShoppingMethodsHelper;
 
-public class CrediCardPayment implements ShoppingMethods {
+public class CrediCardPayment implements ShoppingMethodsHelper {
 	String isim;
 	int kartNumarasý;
 	int cvv;
